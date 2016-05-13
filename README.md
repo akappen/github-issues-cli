@@ -1,20 +1,28 @@
 # Issues
 
-**TODO: Add description**
+Example CLI app from Programming Elixir 1.2.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+1. Clone the repository
 
-  1. Add issues to your list of dependencies in `mix.exs`:
+```
+$ git clone https://github.com/akappen/github-issues-cli.git
+$ cd github-issues-cli
+```
 
-        def deps do
-          [{:issues, "~> 0.0.1"}]
-        end
+2. Build the escript
 
-  2. Ensure issues is started before your application:
+```
+$ mix deps.get
+$ mix escript.build
+```
 
-        def application do
-          [applications: [:issues]]
-        end
+## Usage
 
+Prints a table of most recent issues for the elixir-lang user's elixir
+project. Help is available with the `--help` flag.
+
+```
+$ ./issues elixir-lang elixir
+```
